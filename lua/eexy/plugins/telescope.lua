@@ -34,10 +34,11 @@ return {
         end)
 
         vim.keymap.set('n', "<leader>fb", builtin.buffers, {})
+        vim.keymap.set('n', "<leader>fm", builtin.marks)
 
         -- open input and search with telescope
         vim.keymap.set('n', '<leader>fs', function()
-            builtin.grep_string({ search = vim.fn.input("Grep > ") })
+            builtin.grep_string()
         end)
     end
 }
