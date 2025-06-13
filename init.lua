@@ -19,6 +19,13 @@ vim.lsp.config('vue-language-server', {
 })
 
 
+vim.lsp.config('biome', {
+    on_attach = function()
+        print("hello biome")
+    end,
+})
+
 vim.lsp.enable('lua-language-server')
 vim.lsp.enable('typescript-language-server')
 vim.lsp.enable('vue-language-server')
+vim.lsp.enable('biome')

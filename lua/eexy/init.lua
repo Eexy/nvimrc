@@ -1,3 +1,3 @@
+require("eexy.lazy")
 require("eexy.remap")
 require("eexy.set")
-require("eexy.lazy")
