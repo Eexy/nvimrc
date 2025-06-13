@@ -16,7 +16,6 @@ return {
                     i = {
                         ["<S-v>"] = actions.select_vertical,
                         ["<S-x>"] = actions.select_horizontal,
-
                     }
                 }
             }
