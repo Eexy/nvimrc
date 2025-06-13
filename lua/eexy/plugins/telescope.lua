@@ -17,11 +17,17 @@ return {
                         ["<S-v>"] = actions.select_vertical,
                         ["<S-x>"] = actions.select_horizontal,
                     }
+                },
+            },
+            pickers = {
+                find_files = {
+                    find_command = { 'fd', '--type', 'f', '--hidden', '--exclude', '.git' },
                 }
             }
         })
 
         local builtin = require('telescope.builtin')
+
         -- search file in directory
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
         -- search file that are tracked by git
