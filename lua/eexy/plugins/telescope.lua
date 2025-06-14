@@ -21,7 +21,7 @@ return {
             },
             pickers = {
                 find_files = {
-                    find_command = { 'fd', '--type', 'f', '--hidden', '--exclude', '.git' },
+                    find_command = { 'fd', '--hidden', '--exclude', '.git', '--exclude', 'node_modules' },
                 }
             }
         })
@@ -38,7 +38,9 @@ return {
             builtin.grep_string({ search = word })
         end)
 
+
         vim.keymap.set('n', "<leader>fb", builtin.buffers, {})
+        vim.keymap.set('n', "<leader>fy", builtin.lsp_workspace_symbols, {})
         vim.keymap.set('n', "<leader>fm", builtin.marks)
 
         -- open input and search with telescope
