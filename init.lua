@@ -32,8 +32,16 @@ vim.lsp.config('biome', {
     end,
 })
 
+vim.lsp.config('vscode-eslint-language-server', {
+    on_attach = function()
+        print("hello eslint")
+    end,
+})
+
+
 vim.lsp.enable('lua-language-server')
 vim.lsp.enable('typescript-language-server')
 vim.lsp.enable('vue-language-server')
 vim.lsp.enable('biome')
 vim.lsp.enable('tailwind-language-server')
+vim.lsp.enable('vscode-eslint-language-server')
