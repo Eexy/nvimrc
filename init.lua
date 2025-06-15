@@ -32,6 +32,13 @@ vim.lsp.config('biome', {
     end,
 })
 
+
+vim.lsp.config('marksman', {
+    on_attach = function()
+        print("hello marksman")
+    end,
+})
+
 vim.lsp.config('vscode-eslint-language-server', {
     on_attach = function()
         print("hello eslint")
@@ -53,3 +60,4 @@ vim.lsp.enable('biome')
 vim.lsp.enable('tailwind-language-server')
 vim.lsp.enable('vscode-eslint-language-server')
 vim.lsp.enable('rust-analyzer')
+vim.lsp.enable('marksman')
