@@ -39,9 +39,17 @@ vim.lsp.config('vscode-eslint-language-server', {
 })
 
 
+vim.lsp.config('rust-analyzer', {
+    on_attach = function()
+        print("hello rust")
+    end,
+})
+
+
 vim.lsp.enable('lua-language-server')
 vim.lsp.enable('typescript-language-server')
 vim.lsp.enable('vue-language-server')
 vim.lsp.enable('biome')
 vim.lsp.enable('tailwind-language-server')
 vim.lsp.enable('vscode-eslint-language-server')
+vim.lsp.enable('rust-analyzer')
