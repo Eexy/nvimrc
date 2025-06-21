@@ -26,6 +26,13 @@ vim.lsp.config('tailwind-language-server', {
 })
 
 
+vim.lsp.config('pyright', {
+    on_attach = function()
+        print("hello pyright")
+    end,
+})
+
+
 vim.lsp.config('biome', {
     on_attach = function()
         print("hello biome")
@@ -61,3 +68,4 @@ vim.lsp.enable('tailwind-language-server')
 vim.lsp.enable('vscode-eslint-language-server')
 vim.lsp.enable('rust-analyzer')
 vim.lsp.enable('marksman')
+vim.lsp.enable('pyright')
