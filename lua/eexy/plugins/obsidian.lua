@@ -32,6 +32,15 @@ return {
                 name = "telescope.nvim"
             },
             disable_frontmatter = true,
+            attachments = {
+                img_name_func = function(name)
+                    local current_path = vim.fn.expand("%:p:h")
+
+                    local image_name = name or "image"
+
+                    return current_path .. "/" .. "assets/imgs/" .. image_name
+                end
+            }
         })
     end
 }
