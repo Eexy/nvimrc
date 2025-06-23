@@ -9,6 +9,7 @@ return {
 
     config = function()
         local actions = require("telescope.actions")
+        local utils = require("telescope.utils")
 
         require('telescope').setup({
             defaults = {
@@ -21,7 +22,7 @@ return {
             },
             pickers = {
                 find_files = {
-                    find_command = { 'fd', '--hidden', '--exclude', '.git', '--exclude', 'node_modules' },
+                    find_command = { 'fd', '--type', 'f' },
                 }
             }
         })
@@ -36,6 +37,18 @@ return {
         vim.keymap.set('n', '<leader>fw', function()
             local word = vim.fn.expand("<cword>")
             builtin.grep_string({ search = word })
+        end)
+
+        -- search for gitignore files
+        vim.keymap.set("n", "<leader>fi", function()
+            local opts = {
+                -- The command to run, which lists ignored files
+                --
+                find_command = { 'fd', '--type', 'f', '--no-ignore', '--hidden' },
+                -- Show the path relative to the git root
+            }
+            -- Call the generic Telescope finder with our command
+            builtin.find_files(opts)
         end)
 
 

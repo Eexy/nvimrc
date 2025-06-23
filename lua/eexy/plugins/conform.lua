@@ -4,15 +4,27 @@ return {
     config = function()
         require("conform").setup({
             formatters_by_ft = {
-                javascript = { "prettierd", "prettier", "biome", stop_after_first = true },
-                typescript = { "prettierd", "prettier", "biome", stop_after_first = true },
-                vue = { "prettierd", "prettier", "biome", stop_after_first = true },
+                javascript = { "prettier", "biome", stop_after_first = true },
+                typescript = { "prettier", "biome", stop_after_first = true },
+                vue = { "prettier", "biome", stop_after_first = true },
+                markdown = { "prettier", "biome", stop_after_first = true },
             },
             format_on_save = {
                 -- These options will be passed to conform.format()
                 timeout_ms = 500,
                 lsp_format = "fallback",
             },
+            formatters = {
+                prettier = {
+                    prepend_args = {
+                        "--print-width",
+                        "80",
+                        "--config-precedence",
+                        "prefer-file",
+                    }
+                }
+            }
+
         })
     end
 }
