@@ -19,6 +19,8 @@ return {
                     prepend_args = {
                         "--print-width",
                         "80",
+                        "--tab-width",
+                        "4",
                         "--config-precedence",
                         "prefer-file",
                     }
