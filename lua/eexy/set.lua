@@ -15,12 +15,12 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 7
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
@@ -33,5 +33,11 @@ vim.api.nvim_create_autocmd('BufWinEnter', {
     pattern = { '*.md' },
     callback = function()
         vim.opt.textwidth = 80
+    end,
+})
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+    callback = function()
+        vim.highlight.on_yank()
     end,
 })
