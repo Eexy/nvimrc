@@ -26,7 +26,12 @@ return {
         -- C-k: Toggle signature help (if signature.enabled = true)
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        keymap = { preset = 'super-tab' },
+        keymap = {
+            preset = 'super-tab',
+            ['<C-p>'] = { 'select_prev', 'fallback_to_mappings' },
+            ['<C-n>'] = { 'select_next', 'fallback_to_mappings' },
+            ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+        },
         signature = { enabled = true },
         appearance = {
             -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'

@@ -28,5 +28,7 @@ return {
             }
 
         })
+        local conform = require("conform")
+        vim.keymap.set("n", "<F3>", function() conform.format({ async = true, lsp_fallback = true }) end)
     end
 }
