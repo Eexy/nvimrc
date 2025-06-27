@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", "<cmd>:Oil --float<Cr>")
 
-local conform = require "conform"
 vim.keymap.set("n", "<leader>w", "<cmd>:w<CR>")
 vim.keymap.set("n", "<C-a>h", "<C-w>h")
 vim.keymap.set("n", "<C-a>l", "<C-w>l")
