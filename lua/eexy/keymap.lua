@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", "<cmd>:Oil --float<Cr>")
+vim.keymap.set("n", "<leader>pv", "<cmd>:Oil<Cr>")
 
 vim.keymap.set("n", "<leader>w", "<cmd>:w<CR>")
 vim.keymap.set("n", "<C-a>h", "<C-w>h")
