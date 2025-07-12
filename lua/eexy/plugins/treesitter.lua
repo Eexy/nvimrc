@@ -26,6 +26,8 @@ return {
                         ['ai'] = '@conditional.outer',
                         ['il'] = '@loop.inner',
                         ['al'] = '@loop.outer',
+                        ['ak'] = '@call.outer',
+                        ['ik'] = '@call.inner',
                     },
                 },
             },
