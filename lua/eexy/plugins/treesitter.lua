@@ -28,6 +28,8 @@ return {
                         ['al'] = '@loop.outer',
                         ['ak'] = '@call.outer',
                         ['ik'] = '@call.inner',
+                        ['ip'] = '@parameter.inner',
+                        ['ap'] = '@parameter.outer',
                     },
                 },
             },
