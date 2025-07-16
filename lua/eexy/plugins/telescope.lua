@@ -58,8 +58,6 @@ return {
         vim.keymap.set('n', "<leader>fm", builtin.marks)
 
         -- open input and search with telescope
-        vim.keymap.set('n', '<leader>fs', function()
-            builtin.grep_string()
-        end)
+        vim.keymap.set('n', '<leader>fs', builtin.live_grep)
     end
 }

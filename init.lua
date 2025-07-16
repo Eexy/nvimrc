@@ -33,6 +33,15 @@ vim.lsp.config('pyright', {
 })
 
 
+vim.lsp.config('clangd', {
+    on_attach = function()
+        print("hello clangd")
+    end,
+})
+
+
+
+
 vim.lsp.config('biome', {
     on_attach = function()
         print("hello biome")

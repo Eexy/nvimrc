@@ -1,7 +1,22 @@
 return {
     'saghen/blink.cmp',
     -- optional: provides snippets for the snippet source
-    dependencies = { 'rafamadriz/friendly-snippets' },
+    dependencies = { {
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!).
+        -- build = "make install_jsregexp CC=clang"
+        dependencies = {
+            'rafamadriz/friendly-snippets'
+
+        },
+
+        config = function()
+            require("luasnip").filetype_extend("typescript", { "javascript" })
+            require("luasnip.loaders.from_vscode").lazy_load()
+        end
+    } },
 
     -- use a release tag to download pre-built binaries
     version = '*',
@@ -42,6 +57,8 @@ return {
         -- (Default) Only show the documentation popup when manually triggered
         completion = { documentation = { auto_show = false } },
 
+        snippets = { preset = 'luasnip' },
+
         -- Default list of enabled providers defined so that you can extend it
         -- elsewhere in your config, without redefining it, due to `opts_extend`
         sources = {
@@ -56,4 +73,5 @@ return {
         fuzzy = { implementation = "prefer_rust_with_warning" }
     },
     opts_extend = { "sources.default" }
+
 }
