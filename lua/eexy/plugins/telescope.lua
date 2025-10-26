@@ -7,8 +7,17 @@ return {
         vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
         vim.keymap.set('n', '<leader>fs', builtin.live_grep, { desc = 'Telescope live grep' })
         vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = 'Telescope live grep' })
+        vim.keymap.set('n', '<leader>fi', function()
+            builtin.find_files({
+                find_command = {
+                    "rg", "--files", "--hidden", "--no-require-git", "-g", "!.git"
+                }
+            })
+        end, { desc = 'Telescope live grep' })
 
         vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+        vim.keymap.set('n', '<leader>fwb', builtin.current_buffer_fuzzy_find,
+            { desc = 'Telescope search in current buffer' })
     end
 }
