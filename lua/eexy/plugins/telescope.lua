@@ -4,6 +4,18 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
         local builtin = require('telescope.builtin')
+        local actions = require('telescope.actions')
+
+        require('telescope').setup({
+            defaults = {
+                mappings = {
+                    n = {
+                        ['dd'] = actions.delete_buffer
+                    }
+                }
+            }
+        })
+
         vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
         vim.keymap.set('n', '<leader>fs', builtin.live_grep, { desc = 'Telescope live grep' })
         vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = 'Telescope live grep' })
