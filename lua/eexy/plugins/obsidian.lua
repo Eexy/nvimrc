@@ -8,9 +8,13 @@ return {
     legacy_commands = false, -- this will be removed in the next major release
     workspaces = {
       {
+        name = "swe",
+        path = "~/Documents/swe-vault",
+      },
+{
         name = "personal",
         path = "~/Documents/vault",
-      },
+      }
     },
   },
 }
