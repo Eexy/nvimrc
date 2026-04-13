@@ -1,30 +1,17 @@
-# Nvim config
+# Nvim Config
 
-## Installation guide
+## Prerequisites
 
-### LSP
+- [Node.js](https://nodejs.org)
+- [Rust](https://www.rust-lang.org/tools/install) with nightly toolchain (required by blink.cmp)
 
-- [ ] biome
-- [ ] eslint-lsp
-- [ ] lua-language-server
-- [ ] marksman
-- [ ] pyright
-- [ ] rust-analyzer
-- [ ] tailwindcss-language-server
-- [ ] typescript-language-server
+## Install
 
-### Formatter
+```bash
+git clone https://github.com/Eexy/nvimrc ~/.config/nvim
+```
+- Remove the `.git` directory: `rm -rf ~/.config/nvim/.git`
 
-- [ ] prettier
+## Update
 
-### Terminal package
-
-- [ ] sharkpd.fd
-- [ ] lazygit
-- [ ] BurntSushi.ripgrep.MSVC
-
-### Other
-
-- [ ] rust
-- [ ] GnuWin32.Make
-- [ ] python
+- Run `:Lazy sync` to update all plugins
