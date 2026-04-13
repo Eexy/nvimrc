@@ -7,6 +7,12 @@
 --- `gitlab-ci-ls` can be installed via cargo:
 --- cargo install gitlab-ci-ls
 
+vim.filetype.add({
+  pattern = {
+    ['%.gitlab%-ci%.ya?ml'] = 'yaml.gitlab',
+  },
+})
+
 local util = require 'lspconfig.util'
 
 local cache_dir = vim.uv.os_homedir() .. '/.cache/gitlab-ci-ls/'
