@@ -2,8 +2,10 @@
 
 ## Prerequisites
 
+- [Neovim](https://neovim.io) >= 0.11
 - [Node.js](https://nodejs.org)
 - [Rust](https://www.rust-lang.org/tools/install) with nightly toolchain (required by blink.cmp)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## Install
 
