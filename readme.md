@@ -2,11 +2,12 @@
 
 ## Prerequisites
 
-- [Neovim](https://neovim.io) >= 0.11
+- [Neovim](https://neovim.io) >= 0.12
 - [Node.js](https://nodejs.org)
 - [Rust](https://www.rust-lang.org/tools/install) with nightly toolchain (required by blink.cmp)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
+- [lazygit](https://github.com/jesseduffield/lazygit)
 
 ## Install
 
