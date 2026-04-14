@@ -8,6 +8,7 @@
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
 - [lazygit](https://github.com/jesseduffield/lazygit)
+- [clangd](https://clangd.llvm.org)
 
 ## Install
 
