@@ -4,11 +4,11 @@ return {
     config = function()
         require("conform").setup({
             formatters_by_ft = {
-                javascript = { "prettierd", "prettier", "biome", stop_after_first = true },
-                json = { "prettierd", "prettier", "biome", stop_after_first = true },
-                typescript = { "prettierd", "prettier", "biome", stop_after_first = true },
-                vue = { "prettierd", "prettier", "biome", stop_after_first = true },
-                markdown = { "prettierd", "prettier", "biome", stop_after_first = true },
+                javascript = { "prettierd", "prettier", stop_after_first = true },
+                json = { "prettierd", "prettier", stop_after_first = true },
+                typescript = { "prettierd", "prettier", stop_after_first = true },
+                vue = { "prettierd", "prettier", stop_after_first = true },
+                markdown = { "prettierd", "prettier", stop_after_first = true },
             },
             format_on_save = {
                 -- These options will be passed to conform.format()
