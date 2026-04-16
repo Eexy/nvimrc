@@ -55,7 +55,33 @@ return {
         },
 
         -- (Default) Only show the documentation popup when manually triggered
-        completion = { documentation = { auto_show = false } },
+        completion = {
+            documentation = { auto_show = false },
+            menu = {
+                draw = {
+                    components = {
+                        kind_icon = {
+                            text = function(ctx)
+                                local color = require('blink.cmp.sources.lsp.hacks.tailwind').get_hex_color(ctx.item)
+                                if color then return '󰝤 ' end
+                                return ctx.kind_icon .. ctx.icon_gap
+                            end,
+                            highlight = function(ctx)
+                                local color = require('blink.cmp.sources.lsp.hacks.tailwind').get_hex_color(ctx.item)
+                                if color then
+                                    local hl = 'BlinkCmpColor_' .. color:sub(2)
+                                    if vim.fn.hlID(hl) == 0 then
+                                        vim.api.nvim_set_hl(0, hl, { fg = color })
+                                    end
+                                    return hl
+                                end
+                                return { { group = ctx.kind_hl, priority = 20000 } }
+                            end,
+                        },
+                    },
+                },
+            },
+        },
 
         snippets = { preset = 'luasnip' },
 
@@ -67,7 +93,7 @@ return {
                 lsp = {
                     name = 'LSP',
                     module = 'blink.cmp.sources.lsp',
-                    opts = { tailwind_color_icon = '██' },
+                    opts = {},
                 },
             },
         },
