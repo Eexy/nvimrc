@@ -9,6 +9,7 @@
 - [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [clangd](https://clangd.llvm.org)
+- [Nerd Font](https://www.nerdfonts.com) (required for icons)
 
 ## Install
 
